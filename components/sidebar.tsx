@@ -43,11 +43,13 @@ const categories = [
   { icon: Map, label: "Adventure", href: "/category/Adventure" },
   { icon: Gamepad2, label: "Arcade", href: "/category/Arcade" },
   { icon: Car, label: "Car", href: "/category/Car" },
+  { icon: Dices, label: "Cards", href: "/category/Cards" },  // 添加 Cards 分类
   { icon: Gamepad2, label: "Clicker", href: "/category/Clicker" },
   { icon: Gamepad2, label: "Crazy", href: "/category/Crazy" },
   { icon: Car, label: "Drift", href: "/category/Drift" },
   { icon: Car, label: "Driving", href: "/category/Driving" },
   { icon: Shirt, label: "Girl", href: "/category/Girl" },
+  { icon: Gamepad2, label: "Jump & Run", href: "/category/Jump%20%26%20Run" },  // 添加 Jump & Run 分类
   { icon: Dices, label: "Kids", href: "/category/Kids" },
   { icon: Monitor, label: "Mobile", href: "/category/Mobile" },
   { icon: Users, label: "Multiplayer", href: "/category/Multiplayer" },

@@ -25,3 +25,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+/drivers/chrome-win64.zip
+
+*.dll
+*.log

@@ -26,6 +26,17 @@ export function GameDetail({ game, onBack }: GameDetailProps) {
   const [isFullscreen, setIsFullscreen] = useState(false)
 
   const parseGameContent = (htmlContent: string): ParsedContent => {
+    // 如果没有html_content，则使用description创建一个基本的section
+    if (!htmlContent) {
+      return {
+        sections: [{
+          title: 'About This Game',
+          content: `<p>${game.description || 'No description available.'}</p>`,
+          level: 1
+        }]
+      }
+    }
+
     const parser = new DOMParser()
     const doc = parser.parseFromString(htmlContent, 'text/html')
     
@@ -98,15 +109,16 @@ export function GameDetail({ game, onBack }: GameDetailProps) {
         if (currentSection.content.trim()) {
           sections.push(currentSection)
         }
+
+        return { sections }
       }
-      
-      return { sections }
     }
     
+    // 如果无法解析HTML内容，则使用description创建一个基本的section
     return { 
       sections: [{
         title: 'About This Game',
-        content: game.description,
+        content: `<p>${game.description || 'No description available.'}</p>`,
         level: 1
       }]
     }
